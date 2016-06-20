@@ -1,0 +1,1 @@
+This library is made for the Nokia-5510 screen and uses a hwlib library made by Wouter van Ooijen and is used under the BOOST license

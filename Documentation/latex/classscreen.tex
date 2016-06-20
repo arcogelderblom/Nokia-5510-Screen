@@ -1,0 +1,102 @@
+\hypertarget{classscreen}{}\section{screen Class Reference}
+\label{classscreen}\index{screen@{screen}}
+
+
+Screen class.  
+
+
+
+
+{\ttfamily \#include $<$screen.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classscreen_a874ae9e619cb981b05bcd0d42d3deebc}{screen} (due\+::pin\+\_\+out reset, due\+::pin\+\_\+out sce, due\+::pin\+\_\+out dc, due\+::pin\+\_\+out din, due\+::pin\+\_\+out sclk)
+\begin{DoxyCompactList}\small\item\em Constructor screen. \end{DoxyCompactList}\item 
+void \hyperlink{classscreen_aee06841cf6051765bcd65b44d427b1af}{setup} (void)
+\begin{DoxyCompactList}\small\item\em Setup the screen. \end{DoxyCompactList}\item 
+void \hyperlink{classscreen_ab9fcb7cf863eaaf9937c052366cb64b3}{draw} (void)
+\begin{DoxyCompactList}\small\item\em Draw function. \end{DoxyCompactList}\item 
+void \hyperlink{classscreen_a23a2fca2099a6bc8b627a3408a8d5621}{set\+\_\+pixel} (int x, int y, int value)
+\begin{DoxyCompactList}\small\item\em Set pixel value. \end{DoxyCompactList}\item 
+void \hyperlink{classscreen_a418d407e8925c94fdaf488ccfe375d34}{clear\+\_\+pixelarray} (void)
+\begin{DoxyCompactList}\small\item\em Clear the pixel array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Screen class. 
+
+This class sets everything up for a Nokia-\/5510 screen, in it the options to setup the screen for use, set any desired pixel and draw it to let it see on the actual screen. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{screen@{screen}!screen@{screen}}
+\index{screen@{screen}!screen@{screen}}
+\subsubsection[{\texorpdfstring{screen(due\+::pin\+\_\+out reset, due\+::pin\+\_\+out sce, due\+::pin\+\_\+out dc, due\+::pin\+\_\+out din, due\+::pin\+\_\+out sclk)}{screen(due::pin_out reset, due::pin_out sce, due::pin_out dc, due::pin_out din, due::pin_out sclk)}}]{\setlength{\rightskip}{0pt plus 5cm}screen\+::screen (
+\begin{DoxyParamCaption}
+\item[{due\+::pin\+\_\+out}]{reset, }
+\item[{due\+::pin\+\_\+out}]{sce, }
+\item[{due\+::pin\+\_\+out}]{dc, }
+\item[{due\+::pin\+\_\+out}]{din, }
+\item[{due\+::pin\+\_\+out}]{sclk}
+\end{DoxyParamCaption}
+)}\hypertarget{classscreen_a874ae9e619cb981b05bcd0d42d3deebc}{}\label{classscreen_a874ae9e619cb981b05bcd0d42d3deebc}
+
+
+Constructor screen. 
+
+Constructor which initializes everything so the screen and it’s functions can be used 
+
+\subsection{Member Function Documentation}
+\index{screen@{screen}!clear\+\_\+pixelarray@{clear\+\_\+pixelarray}}
+\index{clear\+\_\+pixelarray@{clear\+\_\+pixelarray}!screen@{screen}}
+\subsubsection[{\texorpdfstring{clear\+\_\+pixelarray(void)}{clear_pixelarray(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void screen\+::clear\+\_\+pixelarray (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classscreen_a418d407e8925c94fdaf488ccfe375d34}{}\label{classscreen_a418d407e8925c94fdaf488ccfe375d34}
+
+
+Clear the pixel array. 
+
+This function clears the pixel array. If it was for some reason still filled with values everything get’s set to zero. Useful to call before after the setup and before any other things. \index{screen@{screen}!draw@{draw}}
+\index{draw@{draw}!screen@{screen}}
+\subsubsection[{\texorpdfstring{draw(void)}{draw(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void screen\+::draw (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classscreen_ab9fcb7cf863eaaf9937c052366cb64b3}{}\label{classscreen_ab9fcb7cf863eaaf9937c052366cb64b3}
+
+
+Draw function. 
+
+Every pixel in the array of the screen is gone through and put on screen if the value is 1. \index{screen@{screen}!set\+\_\+pixel@{set\+\_\+pixel}}
+\index{set\+\_\+pixel@{set\+\_\+pixel}!screen@{screen}}
+\subsubsection[{\texorpdfstring{set\+\_\+pixel(int x, int y, int value)}{set_pixel(int x, int y, int value)}}]{\setlength{\rightskip}{0pt plus 5cm}void screen\+::set\+\_\+pixel (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{classscreen_a23a2fca2099a6bc8b627a3408a8d5621}{}\label{classscreen_a23a2fca2099a6bc8b627a3408a8d5621}
+
+
+Set pixel value. 
+
+Give the x and y values of a pixel and give a value (1 or 0) to display the pixel with the next draw or don’t display it \index{screen@{screen}!setup@{setup}}
+\index{setup@{setup}!screen@{screen}}
+\subsubsection[{\texorpdfstring{setup(void)}{setup(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void screen\+::setup (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classscreen_aee06841cf6051765bcd65b44d427b1af}{}\label{classscreen_aee06841cf6051765bcd65b44d427b1af}
+
+
+Setup the screen. 
+
+This needs to be called to setup everything. W\+I\+T\+H\+O\+UT T\+H\+IS C\+A\+L\+L\+ED T\+HE S\+C\+R\+E\+EN C\+A\+N\+N\+OT BE U\+S\+ED. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{screen_8hpp}{screen.\+hpp}\item 
+screen.\+cpp\end{DoxyCompactItemize}
